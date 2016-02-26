@@ -1,15 +1,16 @@
 from setuptools import setup
 
 setup(
-    name='flask_raven',
-    version='0.0.4',
-    install_requires=["flask", "pycrypto"],
-    url='http://github.com/danielchatfield/flask-raven/',
+    name='qualtrics-raven',
+    version='0.0.1',
+    install_requires=["flask", "freeze", "gunicorn", "pycrypto"],
+    url='https://github.com/llewelld/qualtrics-raven',
     license='Artistic 2.0',
-    author='Daniel Chatfield',
-    author_email='chatfielddaniel@gmail.com',
-    description='A flask extension for the University of Cambridge\'s '
-                'authentication system',
-    packages=['flask_raven'],
+    author=['Daniel Chatfield', 'David Llewellyn-Jones'],
+    author_email=['chatfielddaniel@gmail.com', 'David.Llewellyn-Jones@cl.cam.ac.uk'],
+    description='Raven authentication for access to Qualtrics surveys for the '
+                'University of Cambridge',
+    packages=['qualtrics-raven'],
     platforms='any'
 )
+

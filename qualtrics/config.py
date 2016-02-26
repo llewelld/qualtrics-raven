@@ -4,7 +4,7 @@ class Survey():
 		self.key = key
 
 surveyinfo = dict()
-surveyinfo['pico-lab-gate'] = Survey(b'SV_2cx0bicqjAjVxdj', b'W8/j6uBo64bTrqmN')
+surveyinfo['pico-lab-start'] = Survey(b'SV_2cx0bicqjAjVxdj', b'W8/j6uBo64bTrqmN')
 
 baseurl = 'http://cambridge.eu.qualtrics.com//SE/?SID='
 tokenurl = '&ssotoken='
