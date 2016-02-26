@@ -1,2 +1,2 @@
-web: gunicorn example:app --log-file -
+web: gunicorn survey:app --log-file -
 

@@ -4,10 +4,10 @@ import hashlib
 import base64
 import hmac
 import time
+import config
 
-def gettoken(surveyid, data):
+def gettoken(surveyid, key, data):
 	delay = 300
-	key = b'W8/j6uBo64bTrqmN'
 	body = b''
 	for name, value in data.iteritems():
 		body += name + b'=' + value + '&'
@@ -23,7 +23,7 @@ def gettoken(surveyid, data):
 	bodyhmac += '\0' * extrabytes
 	cipher = AES.new(key, AES.MODE_ECB)
 	token = base64.b64encode(cipher.encrypt(bodyhmac))
-	url = 'http://cambridge.eu.qualtrics.com//SE/?SID=' + surveyid + '&ssotoken=' + token
+	url = config.baseurl + surveyid + config.tokenurl + token
 	return url
 
 
