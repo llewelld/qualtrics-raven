@@ -1,3 +1,7 @@
+itsdangerous
+werkzeug
+jinja2
+click
 flask
 freeze
 gunicorn==19.4.5
